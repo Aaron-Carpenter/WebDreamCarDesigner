@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<p>Enter all vehicle details to add a Dream Car:</p>
+<form action = "addCarServlet" method="post">
+<p>Car Make: <input type ="text" name = "make"></p>
+<p>Car Model: <input type = "text" name = "model"></p>
+<p>Color: <input type = "text" name = "color"></p>
+<p>Custom Modifications: <input type = "text" name = "customMods"></p>
+<p><input type = "submit" value="Add Item"></p>
+</form> <br />
+
+<p>Enter all new details for your cars ID:</p>
+<form action = "editCarServlet" method="post">
+<p>Enter New Car Make: <input type ="text" name = "make"></p>
+<p>Car Model: <input type = "text" name = "model"></p>
+<p>Color: <input type = "text" name = "color"></p>
+<p>Custom Modifications: <input type = "text" name = "customMods"></p>
+<p>Enter The ID of the vehicle: <input type = "text" name = "idToEdit"></p>
+<p><input type = "submit" value="Edit Car"></p>
+</form> <br />
+
+<p>Enter ID of car to delete:</p>
+<form action = "deleteCarServlet" method="post">
+<p>Enter The ID of the vehicle: <input type = "text" name = "idToDelete"></p>
+<p><input type = "submit" value="Edit Car"></p>
+</form> <br />
+<a href = "viewAllCarsServlet">View all cars in DB</a>
+</body>
+</html>

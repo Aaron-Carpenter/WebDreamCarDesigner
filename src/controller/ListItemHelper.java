@@ -106,8 +106,4 @@ public class ListItemHelper {
         em.getTransaction().commit();
         em.close();
     }
-
-    public void cleanUp() {
-        emfactory.close();
-    }
 }

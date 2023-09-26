@@ -1,8 +1,4 @@
-/**
- * @author Aaron Carpenter - acarpenter5@dmacc.edu
- * CIS175 - Fall 2023
- * Sep 9, 2023
- */
+
 
 import java.util.Scanner;
 import java.util.List;
@@ -15,21 +11,13 @@ public class StartProgram {
     static Scanner in = new Scanner(System.in);
     static ListItemHelper lih = new ListItemHelper();
 
-    private static void addAVehicle() {
-        System.out.print("Enter Make: ");
-        String make = in.nextLine();
-        System.out.print("Enter Model: ");
-        String model = in.nextLine();
-        System.out.print("Enter Color: ");
-        String color = in.nextLine();
-        System.out.print("Enter Custom Modifications: ");
-        String customModifications = in.nextLine();
+    public static void addAVehicle(String make, String model, String color, String customModifications) {
 
         ListItem toAdd = new ListItem(make, model, color, customModifications);
         lih.insertItem(toAdd);
     }
 
-    private static void deleteAVehicle() {
+    static void deleteAVehicle() {
         System.out.print("Enter the ID of the vehicle to delete: ");
         int idToDelete = in.nextInt();
         in.nextLine();
@@ -133,47 +121,6 @@ public class StartProgram {
         }
     }
 
-    public static void main(String[] args) {
-        runMenu();
-    }
-
-    public static void runMenu() {
-        boolean goAgain = true;
-        System.out.println("-Welcome to Aaron's Dream Car Designer-");
-        while (goAgain) {
-            System.out.println("*  Select an option:");
-            System.out.println("*  (1) Add a Vehicle");
-            System.out.println("*  (2) Edit an Existing Vehicle");
-            System.out.println("*  (3) Delete a Vehicle");
-            System.out.println("*  (4) View Created Vehicles");
-            System.out.println("*  (5) Exit Program");
-            System.out.print("*  Your selection: ");
-            int selection = in.nextInt();
-            in.nextLine();
-
-            switch (selection) {
-                case 1:
-                    addAVehicle();
-                    break;
-                case 2:
-                    editAVehicle();
-                    break;
-                case 3:
-                    deleteAVehicle();
-                    break;
-                case 4:
-                    viewAllCars();
-                    break;
-                case 5:
-                    lih.cleanUp();
-                    System.out.println("Goodbye!");
-                    goAgain = false;
-                    break;
-                default:
-                    System.out.println("Invalid selection. Please try again.");
-            }
-        }
-    }
 
     private static void viewAllCars() {
         List<ListItem> allItems = lih.showAllCars(); // Updated method name

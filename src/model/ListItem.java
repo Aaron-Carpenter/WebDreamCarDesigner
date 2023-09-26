@@ -20,9 +20,6 @@ public class ListItem {
     @Column(name = "ID")
     private int id;
 
-    @Column(name = "ITEM")
-    private String item;
-
     // New private variables
     @Column(name = "MAKE")
     private String make;
@@ -48,25 +45,12 @@ public class ListItem {
         this.customModifications = customModifications;
     }
 
-    public ListItem(String item) {
-        super();
-        this.item = item;
-    }
-
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getItem() {
-        return item;
-    }
-
-    public void setItem(String item) {
-        this.item = item;
     }
 
     // Getters and setters for new variables
@@ -101,9 +85,5 @@ public class ListItem {
 
     public void setCustomModifications(String customModifications) {
         this.customModifications = customModifications;
-    }
-
-    public String returnItemDetails() {
-        return this.item;
     }
 }
