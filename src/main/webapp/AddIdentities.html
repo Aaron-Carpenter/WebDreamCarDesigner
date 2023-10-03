@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Identities</title>
+</head>
+<body>
+    <h1>Add Driver and Passenger Identities</h1>
+    <form action="AddIdentitiesServlet" method="post">
+        <label>Driver First Name: <input type="text" name="driverFName"></label><br>
+        <label>Driver Last Name: <input type="text" name="driverLName"></label><br>
+        <label>Passenger First Name: <input type="text" name="passengerFName"></label><br>
+        <label>Passenger Last Name: <input type="text" name="passengerLName"></label><br>
+        <input type="submit" value="Add Identities">
+        </form>
+        <form action="DeleteDriverServlet" method="post">
+        <label for="deleteDriverId">Delete Driver by ID:</label>
+        <input type="number" id="deleteDriverId" name="deleteDriverId" required>
+        <br>
+        <input type="submit" value="Delete Driver">
+    	</form>
+        <p><a href="ViewIdentities.jsp">View Identities</a></p>
+        
+</body>
+</html>

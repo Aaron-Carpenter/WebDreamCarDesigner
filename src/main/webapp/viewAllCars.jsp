@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
+<!--  Tried formatting this one, it turned out pretty ugly in my opinion so I have not bothered with others. -->
 <!DOCTYPE html>
 <html>
 <head>
